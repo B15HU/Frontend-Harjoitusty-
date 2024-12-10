@@ -1,47 +1,55 @@
-# Svelte + Vite
+# StudyFlow
 
-This template should help get you started developing with Svelte in Vite.
+**Tekijä**: Ali Bishaar  
+**Harjoitustyön nimi**: StudyFlow  
 
-## Recommended IDE Setup
+---
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+## Kuvaus
 
-## Need an official Svelte framework?
+StudyFlow on suunniteltu auttamaan opiskelijoita ymmärtämään kurssien työmäärät ja hallitsemaan niitä paremmin. Sovelluksen avulla käyttäjät voivat:  
+1. Lisätä kursseja ja määrittää niille opintopisteet.  
+2. Asettaa yhteisen määräajan kurssien suorittamiselle.  
+3. Määrittää opiskelupäivät ja -määrät viikoittain.  
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+Näiden tietojen perusteella sovellus laskee päivittäisen opiskelutarpeen ja jakaa ajan kursseille niiden vaatimusten mukaisesti. Käyttäjää motivoidaan humoristisilla viesteillä, jotka rohkaisevat säännölliseen opiskeluun.  
 
-## Technical considerations
+Sovellus auttaa opiskelijoita realistisen opiskelusuunnitelman laatimisessa, vähentäen stressiä ja lisäten tuottavuutta.
 
-**Why use this over SvelteKit?**
+---
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+## Hyödynnetyt materiaalit
 
-This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+- **YouTube**:  
+  [The Net Ninja - Svelte Playlist](https://www.youtube.com/playlist?list=PL4cUxeGkcC9hpM9ARM59Ve3jqcb54dqiP)  
+  (pääasiallinen lähde, mutta myös muita materiaaleja käytetty täydentävästi)
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+- **Svelte-dokumentaatio**:  
+  - [Svelte Animate](https://svelte.dev/docs/svelte/animate)  
+  - [Svelte Transition](https://svelte.dev/docs/svelte/svelte-transition)
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+- **W3Schools**:  
+  Hyödynnetty perustaitojen kertaamiseen, kuten valintaelementtien (select, checkbox) ja CSS:n käytössä.
 
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
+- **Opettajan kurssimateriaalit**:  
+  Projektin luonti, kirjautumis- ja rekisteröitymistoimintojen toteutus, Writable Store -ominaisuuden käyttö sekä muita hyödyllisiä aiheita.
 
-**Why include `.vscode/extensions.json`?**
+- **TikoSupport ja luokkatoverit**:  
+  Keskustelut ja ideointi ongelmien ratkaisemiseksi.
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
+---
 
-**Why enable `checkJs` in the JS template?**
+## Tekoälyn hyödyntäminen
 
-It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
+Projektin alkuvaiheessa tekoäly osoittautui erityisen hyödylliseksi monissa tehtävissä, kuten:  
+- Koodin virheiden paikantamisessa ja korjaamisessa.  
+- Funktioiden ja laskukaavojen suunnittelussa.  
+- Käyttöliittymän sisällön muotoilussa selkeämmäksi ja käyttäjäystävällisemmäksi.  
+- Tulosteiden parantamisessa: alkuperäinen tekstimuotoinen esitys muutettiin taulukkomuotoon.
 
-**Why is HMR not preserving my local component state?**
+Vaikka tekoäly oli korvaamaton alkuvaiheen suunnittelussa ja ongelmanratkaisussa, suurin osa työstä on omaa käsialaani, mukaan lukien koodin ymmärtäminen ja uudelleenkirjoittaminen. 
 
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/sveltejs/svelte-hmr/tree/master/packages/svelte-hmr#preservation-of-local-state).
+Työn edetessä tekoälyn hyöty alkoi kuitenkin vähentyä, kun projektissa oli useita komponentteja ja toimintoja. Tekoälyn tarjoamat ratkaisut vaativat usein manuaalista muokkausta, ja opin nopeasti arvioimaan kriittisesti sen antamia ehdotuksia.  
 
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
+---
 
-```js
-// store.js
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
-```
