@@ -1,0 +1,223 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: url(/public/kuva1.jpg) no-repeat center fixed;
+  background-size: cover;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  font-weight: 700;
+  color: #ff3e00;
+  margin-bottom: 10px;
+}
+
+h3 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.card,
+#app {
+  padding: 2em;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+button,
+.custom-button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    border-color 0.25s;
+}
+
+button {
+  background-color: #1a1a1a;
+  border: 1px solid #000000;
+}
+
+button:hover {
+  background-color: rgb(213, 212, 212);
+  transform: scale(1.05);
+  border: 2px solid #000000;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.custom-button {
+  background-color: #ff3e00;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  transform: scale(1);
+}
+
+.custom-button:hover {
+  background-color: #e63900;
+  transform: scale(1.05);
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 35px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 2px solid #ff3e00;
+  opacity: 92%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Lisää varjo tekstille paremman visuaalisen vaikutelman vuoksi */
+}
+
+input {
+  width: 100%;
+  height: 30px;
+  background: #e2e8f0;
+  border: 1px solid #000000;
+  border-radius: 15px;
+  font-style: italic;
+  font-family: 'Roboto Flex', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  padding-left: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  width: 100%;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 36px;
+  text-align: left;
+  color: #000000;
+}
+
+.otsikko {
+  color: #ff3e00;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.close {
+  background-color: gray;
+  color: black;
+  padding: 10px 20px;
+  width: 125px;
+  border-radius: 5px;
+  position: absolute;
+  top: 25px;
+  right: 40px;
+}
+
+.link {
+  color: #007bff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+.link:hover {
+  text-decoration: none;
+}
+
+.list-style {
+  list-style-type: disc;
+  list-style-position: inside;
+  text-align: left;
+}
+
+.intro-teksti {
+  color: #333; /* Tummempi tekstiväri paremman lukukelpoisuuden vuoksi */
+  font-size: 1.4rem; /* Suurempi fonttikoko korostaa tekstiä */
+  line-height: 1.6; /* Pienempi riviväli parantaa lukukelpoisuutta */
+  margin-bottom: 30px; /* Suurempi marginaali erottaa tekstin muusta sisällöstä */
+  font-family: 'Urbanist', sans-serif; /* Varmistetaan, että fontti on oikein */
+  text-align: center; /* Keskitä teksti paremman visuaalisen vaikutelman vuoksi */
+  max-width: 800px; /* Rajoita tekstin leveys paremman lukukelpoisuuden vuoksi */
+  margin-left: auto; /* Keskitä teksti vaakasuunnassa */
+  margin-right: auto; /* Keskitä teksti vaakasuunnassa */
+  padding: 20px; /* Lisää tyhjää tilaa tekstin ympärille */
+  background-color: #f9f9f9; /* Taustaväri erottaa tekstin muusta sisällöstä */
+  border-radius: 10px; /* Pyöristetyt kulmat antavat pehmeämmän ulkonäön */
+}
+
+.sisalto {
+  text-align: left;
+}
+
+.virheIlmoitus {
+  color: #ff3e00; /* Väri muutettu */
+  font-size: 0.875rem; /* Pienempi fonttikoko */
+  margin-top: -10px; /* Lähemmäksi input-elementtiä */
+  margin-bottom: 10px; /* Lisää tilaa alapuolelle */
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
